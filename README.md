@@ -24,7 +24,7 @@ cd path/to/folder
 http-server -o
 ```
 ## Angular 2
-### Components
+### Component Base
 ```typescript
 @Component({
   selector:'nice-component'
@@ -33,7 +33,9 @@ http-server -o
   templateUrl:"path/to/NiceComponent.html"
 })
 class NiceComponent{
-  ...
+	property:type;
+	constructor(){...}
+	aMethod(){...}
 }
 ```
 ### Dependency Injection
