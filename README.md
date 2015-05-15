@@ -79,23 +79,26 @@ export class itemRenderer{
 ```
 Listen to event with the new (event) syntax
 
-```
+```html
 <item-renderer (delete-item)="removeItem(item)" />
 ```
 
 ### Component properties
 ```typescript
+// itemRenderer.ts
 import { Component, View, EventEmitter } from "angular2/angular2";
 
 @Component({
 	...,
 	properties:{item: "item"}
 })
+```
 
-// new [property] syntax
+```html
+// Main.html 
 <ul>
 	<li *for="#item of model.items"> 
-		<item-renderer [item]="item" />
+		<item-renderer [item]="item" /> <!-- new [property] syntax -->
 	</li>
 </ul>
 ```
