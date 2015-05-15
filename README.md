@@ -66,11 +66,11 @@ export class itemRenderer{
 	deleteItem:EventEmitter
 	
 	constructor(){
-		this.deleteItem = new EventEmitter()
+		this.deleteItem = new EventEmitter();
 	}
 	
 	removeItem( item:string ){
-		this.deleteItem.next()
+		this.deleteItem.next();
 		console.log('remove ' + item);
 	}
 }
@@ -91,5 +91,9 @@ import { Component, View, EventEmitter } from "angular2/angular2";
 })
 
 // new [property] syntax
-<item-renderer [item]="item" />
+<ul>
+	<li *for="#item of model.items"> 
+		<item-renderer [item]="item" />
+	</li>
+</ul>
 ```
