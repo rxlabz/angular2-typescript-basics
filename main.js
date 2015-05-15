@@ -12,7 +12,7 @@ if (typeof __decorate !== "function") __decorate = function (decorators, target,
 if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", "angular2/angular2", "comps/MyModel"], function (require, exports, angular2_1, MyModel_1) {
+define(["require", "exports", "angular2/angular2", "comps/itemRenderer", "comps/itemForm", "comps/MyModel"], function (require, exports, angular2_1, itemRenderer_1, itemForm_1, MyModel_1) {
     var AppComponent = (function () {
         function AppComponent(m) {
             this.model = m;
@@ -28,7 +28,7 @@ define(["require", "exports", "angular2/angular2", "comps/MyModel"], function (r
             }),
             angular2_1.View({
                 templateUrl: "Main.html",
-                directives: [angular2_1.For]
+                directives: [angular2_1.For, itemForm_1.itemForm, itemRenderer_1.itemRenderer]
             }), 
             __metadata('design:paramtypes', [MyModel_1.MyModel])
         ], AppComponent);
