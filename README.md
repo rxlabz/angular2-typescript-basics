@@ -4,7 +4,7 @@ A very basic Angular2 (Alpha23) / Typescript(1.5 Alpha) app
 ( BROKEN IN Safari/IE - https://github.com/angular/angular/issues/1640 )
 
 ##Setup
-install node & npm : https://nodejs.org
+Install node & npm : https://nodejs.org
 
 Get Visual Code Studio : https://code.visualstudio.com
 
