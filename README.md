@@ -20,7 +20,7 @@ check https://www.youtube.com/watch?v=HmWm21cCAXM for setup details
 
 ```bash
 cd path/to/folder
-# launch a server in default browser ( broken in safari )
+# launch a server in default browser ( broken in safari & IE )
 http-server -o
 ```
 ## Angular 2
