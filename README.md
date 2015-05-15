@@ -8,7 +8,7 @@ Install node & npm : https://nodejs.org
 
 Get Visual Code Studio : https://code.visualstudio.com
 
-install typescript 1.5.0 & tsd :
+install [typescript 1.5.0](http://www.typescriptlang.org) & [tsd](https://github.com/Definitelytyped/tsd#readme) :
 ```
 npm install typescript -g
 npm install tsd -g
