@@ -14,7 +14,7 @@ import {MyModel} from "comps/MyModel"
 })
 @View({
 	templateUrl:"Main.html",
-	directives:[For, itemForm, itemRenderer]
+	directives:[For]
 	
 })
 class AppComponent{
