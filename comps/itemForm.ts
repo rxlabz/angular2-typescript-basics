@@ -1,7 +1,6 @@
 /// <reference path="../main.ts" />
 
 import { Component, View } from "angular2/angular2";
-import {Inject} from "angular2/di";
 
 import {MyModel} from "comps/MyModel";
 
