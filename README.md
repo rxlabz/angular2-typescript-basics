@@ -1,5 +1,5 @@
 # angular2-typescript-basics
-A very basic Angular2 (Alpha23) / Typescript(1.5 Alpha) app
+A very basic Angular2 (Alpha23) / Typescript(1.5 Beta) app
 
 ( BROKEN IN Safari/IE - https://github.com/angular/angular/issues/1640 )
 
@@ -17,9 +17,12 @@ npm install http-server -g
 check https://www.youtube.com/watch?v=HmWm21cCAXM for setup details 
 
 ## Run
-
 ```bash
 cd path/to/folder
+
+# ts2js watcher
+tsc -w
+
 # launch a server in default browser ( broken in safari & IE )
 http-server -o
 ```
