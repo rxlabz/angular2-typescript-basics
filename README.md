@@ -75,3 +75,21 @@ export class itemRenderer{
 	}
 }
 ```
+Listen to event with the new (event) syntax
+
+```
+<item-renderer (delete-item)="removeItem(item)" />
+```
+
+### Component properties
+```typescript
+import { Component, View, EventEmitter } from "angular2/angular2";
+
+@Component({
+	...,
+	properties:{item: "item"}
+})
+
+// new [property] syntax
+<item-renderer [item]="item" />
+```
