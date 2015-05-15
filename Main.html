@@ -1,0 +1,22 @@
+<style>
+	li{
+		list-style: none;
+	}
+</style>
+
+<h1>{{ appName }}</h1>
+
+<item-form></item-form>
+
+	
+<p>{{ model.items.length }} items</p>
+	
+<ul>
+	<li *for="#item of model.items"> 
+		<item-renderer
+			[item]="item"
+			(delete-item)="removeItem(item)"
+		/>
+	</li>
+</ul>
+

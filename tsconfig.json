@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "module": "amd",
+        "target": "es5"
+    },
+    "files": [
+        "main.ts",
+        "comps/itemForm.ts",
+        "comps/MyModel.ts",
+        "comps/itemRenderer.ts",
+        "typings/tsd.d.ts"
+    ]
+}
