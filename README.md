@@ -5,10 +5,10 @@ A very basic Angular2 (Alpha23) / Typescript(1.5 Alpha) app
 
 ##Setup
 install node & npm : https://nodejs.org
-install typescript 1.5.0 & tsd :
 
 Get Visual Code Studio : https://code.visualstudio.com
 
+install typescript 1.5.0 & tsd :
 ```
 npm install typescript -g
 npm install tsd -g
