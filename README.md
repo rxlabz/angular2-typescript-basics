@@ -102,3 +102,13 @@ import { Component, View, EventEmitter } from "angular2/angular2";
 	</li>
 </ul>
 ```
+### Component sub-components
+If a component A uses a component B, B must be declared in A @View.directives
+
+```typescript
+@View({
+	...,
+	directives:[For, itemForm, itemRenderer]
+})
+
+```
