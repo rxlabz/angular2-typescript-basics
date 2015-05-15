@@ -16,7 +16,7 @@ export class itemForm{
 	model:MyModel;
 	currentValue:string;
 
-	constructor(@Inject(MyModel) m:MyModel)
+	constructor(m:MyModel)
 	{
 		this.model = m;
 		this.currentValue = "";
