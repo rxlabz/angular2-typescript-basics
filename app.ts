@@ -1,12 +1,10 @@
 /// <reference path="typings/tsd.d.ts" />
-/// <reference path="comps/MyModel.ts" />
-/// <reference path="comps/itemForm.ts" />
 
 import {Component, View, bootstrap , For, EventEmitter } from "angular2/angular2";
 
-import {itemRenderer} from "comps/itemRenderer";
-import {itemForm} from "comps/itemForm"
-import {MyModel} from "comps/MyModel"
+import {itemRenderer} from "components/itemRenderer";
+import {itemForm} from "components/itemForm"
+import {MyModel} from "components/MyModel"
 
 @Component({
 	selector:'app',

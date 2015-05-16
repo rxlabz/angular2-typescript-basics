@@ -1,0 +1,27 @@
+<style>
+	.content{
+		background-color: #F0F0F0;
+		width: 400px;
+		height: 32px;
+		padding-left: 10px;
+		margin-bottom: 10px;
+		display: flex;
+		align-items:center;
+	}
+	
+	.item-label{
+		text-align: left;
+		width: 360px;
+		display: inline-block;
+	}
+	
+	a{
+		margin-left: 20px;
+		margin-right: 10px;
+	}
+</style>
+
+<div class="content">
+	<span class="item-label" >{{ item }}</span>
+	<a href="#" (click)="removeItem(item)">x</a>
+</div>
