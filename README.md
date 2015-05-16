@@ -1,7 +1,8 @@
 # angular2-typescript-basics
-A very basic Angular2 (Alpha23) / Typescript(1.5 Beta) app
-
-( BROKEN IN Safari/IE - https://github.com/angular/angular/issues/1640 )
+A very basic Angular2 (Alpha23) / Typescript(1.5 Beta) app :
+- Components with properties, events, directives, injectables, templateURL and "subcomponents"
+- DI with injectables
+- custom (event) with EventEmitter
 
 ##Setup
 Install node & npm : https://nodejs.org
@@ -14,7 +15,7 @@ npm install typescript -g
 npm install tsd -g
 npm install http-server -g
 ```
-check https://www.youtube.com/watch?v=HmWm21cCAXM for setup details 
+check https://angular.io/docs/js/latest/quickstart.html or https://www.youtube.com/watch?v=HmWm21cCAXM for setup details 
 
 ## Run
 ```bash
@@ -23,7 +24,8 @@ cd path/to/folder
 # ts2js watcher
 tsc -w
 
-# launch a server in default browser ( broken in safari & IE )
+# launch a server in default browser 
+# !!! BROKEN IN Safari/IE - https://github.com/angular/angular/issues/1640
 http-server -o
 ```
 ## Angular 2
