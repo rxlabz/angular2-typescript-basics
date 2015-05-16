@@ -15,7 +15,7 @@ import {MyModel} from "components/MyModel"
 	directives:[For, itemForm, itemRenderer]
 	
 })
-class AppComponent{
+class App{
 	model:MyModel;	
 	appName:string
 	
@@ -29,4 +29,4 @@ class AppComponent{
 	}
 }
 
-bootstrap(AppComponent);
+bootstrap(App);

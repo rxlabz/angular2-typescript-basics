@@ -6,9 +6,9 @@
     },
     "files": [
         "app.ts",
-        "comps/itemForm.ts",
-        "comps/MyModel.ts",
-        "comps/itemRenderer.ts",
+        "components/itemForm.ts",
+        "components/MyModel.ts",
+        "components/itemRenderer.ts",
         "typings/tsd.d.ts"
     ]
 }
