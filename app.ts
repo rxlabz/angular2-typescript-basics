@@ -1,12 +1,11 @@
 /// <reference path="typings/tsd.d.ts" />
 
-import {Component, View, bootstrap , For, EventEmitter } from "angular2/angular2";
+import {Component, View, bootstrap , For, If, EventEmitter } from "angular2/angular2";
 
 import {ItemRenderer} from "components/ItemRenderer";
 import {ItemForm} from "components/ItemForm";
 import {MyModel} from "components/MyModel";
 import {ItemService} from "services/ItemService";
-
 
 @Component({
 	selector:'app',
@@ -14,18 +13,16 @@ import {ItemService} from "services/ItemService";
 })
 @View({
 	templateUrl:"App.html",
-	directives:[For, ItemForm, ItemRenderer, ItemService]
-	
+	directives:[For, If, ItemForm, ItemRenderer, ItemService]	
 })
-class App{
-	/*model:MyModel;*/	
-	service:ItemService
+class App{	
+	service:ItemService;
 	appName:string;
 	
 	get items():Array<String>{
 		return this.service.items;
 	}
-	
+		
 	constructor(service:ItemService){
 		this.appName = "2Doo";
 		this.service = service;
@@ -33,7 +30,7 @@ class App{
 	}
 	
 	removeItem( item:string ){
-		this.service.removeItem(item);
+		this.service.removeItem(item);	 
 	}
 	
 	removeAll(){

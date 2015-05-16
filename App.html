@@ -15,8 +15,8 @@
 
 <item-form></item-form>
 	
-<p>
-	{{ items.length }} items | 
+<p *if="items.length > 0" >
+	{{ items.length }} items |  
 	<a href="#" (click)="removeAll()">Remove all</a>
 </p>
 
