@@ -2,8 +2,8 @@
 
 import {Component, View, bootstrap , For, EventEmitter } from "angular2/angular2";
 
-import {itemRenderer} from "components/itemRenderer";
-import {itemForm} from "components/itemForm";
+import {ItemRenderer} from "components/ItemRenderer";
+import {ItemForm} from "components/ItemForm";
 import {MyModel} from "components/MyModel";
 import {ItemService} from "services/ItemService";
 
@@ -14,7 +14,7 @@ import {ItemService} from "services/ItemService";
 })
 @View({
 	templateUrl:"App.html",
-	directives:[For, itemForm, itemRenderer, ItemService]
+	directives:[For, ItemForm, ItemRenderer, ItemService]
 	
 })
 class App{

@@ -9,7 +9,7 @@ import {ItemService} from "services/ItemService";
 @View({
 	templateUrl:"components/ItemForm.html"
 })
-export class itemForm{
+export class ItemForm{
 
 	service:ItemService;
 	currentValue:string;

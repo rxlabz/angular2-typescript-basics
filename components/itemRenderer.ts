@@ -6,10 +6,9 @@ import { Component, View, EventEmitter } from "angular2/angular2";
 	events:['deleteItem']
 })
 @View({
-	templateUrl:"components/itemRenderer.html"
+	templateUrl:"components/ItemRenderer.html"
 })
-export class itemRenderer{
-	
+export class ItemRenderer{
 	item:string;
 	deleteItem:EventEmitter
 	
