@@ -1,4 +1,11 @@
 <style>
+	
+	ul{
+		width:420px;
+		display: block;
+		margin: 0 auto;
+	}
+	
 	li{
 		list-style: none;
 	}
@@ -10,7 +17,7 @@
 
 	
 <p>{{ model.items.length }} items</p>
-	
+
 <ul>
 	<li *for="#item of model.items"> 
 		<item-renderer
