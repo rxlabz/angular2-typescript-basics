@@ -13,7 +13,7 @@ import {MyModel} from "comps/MyModel"
 	injectables:[MyModel]
 })
 @View({
-	templateUrl:"Main.html",
+	templateUrl:"App.html",
 	directives:[For, itemForm, itemRenderer]
 	
 })
