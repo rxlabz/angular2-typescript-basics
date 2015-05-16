@@ -82,7 +82,7 @@ export class itemRenderer{
 	}
 }
 ```
-Listen to event with the new (event) syntax
+Listen to an event with the new (event) syntax
 
 ```html
 <item-renderer (delete-item)="removeItem(item)" />

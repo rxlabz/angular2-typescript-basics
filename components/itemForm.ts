@@ -1,6 +1,6 @@
 import { Component, View } from "angular2/angular2";
 
-import {MyModel} from "components/MyModel";
+import {ItemService} from "services/ItemService";
 
 
 @Component({
@@ -11,12 +11,12 @@ import {MyModel} from "components/MyModel";
 })
 export class itemForm{
 
-	model:MyModel;
+	service:ItemService;
 	currentValue:string;
 
-	constructor(m:MyModel)
+	constructor(service:ItemService)
 	{
-		this.model = m;
+		this.service = service;
 		this.currentValue = "";
 	}
 
@@ -29,9 +29,8 @@ export class itemForm{
 	
 	addName(lblName: HTMLInputElement)
 	{	
-		this.model.items.push( lblName.value );		
+		this.service.addItem( lblName.value );		
 		lblName.value = "";	
-		console.log("num : " + this.model.items.length);
 	}	
 	
 }

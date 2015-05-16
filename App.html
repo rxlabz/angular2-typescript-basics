@@ -16,14 +16,19 @@
 <item-form></item-form>
 
 	
-<p>{{ model.items.length }} items</p>
+<p>
+	{{ items.length }} items | 
+	<a href="#" (click)="removeAll()">Remove all</a>
+</p>
 
 <ul>
-	<li *for="#item of model.items"> 
+	<li *for="#item of items"> 
 		<item-renderer
 			[item]="item"
 			(delete-item)="removeItem(item)"
 		/>
 	</li>
 </ul>
+
+
 
