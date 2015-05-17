@@ -1,33 +1,43 @@
 import { Component, View } from "angular2/angular2";
+import {bind} from 'angular2/di';
+import {AngularFire, FirebaseArray} from 'firebase/angularfire';
+
 import {MyModel} from "components/MyModel";
+import {Todo} from "components/MyModel";
 
 @Component({
 	selector:'itemService'
 })
+
 export class ItemService{
 
 	model:MyModel;
+	fbService:FirebaseArray;
 	
-	get items():Array<String>
+	get items():Array<Todo>
 	{
-		return this.model.items;
+		return this.fbService.list;
 	}
 	
 	constructor(m:MyModel){
-		this.model= m;
+		var sync = new AngularFire(new Firebase('https://webapi.firebaseio-demo.com/test'));
+		this.fbService = sync.asArray();
 	}
 	
-	removeItem( item:string ){
-		this.model.items.splice( this.model.items.indexOf( item ), 1 )
+	removeItem( item:Todo ){
+		this.fbService.remove(item);
 	}
 	
 	removeAll(){
-		this.model.items = [];
+		
+		for( var i = this.items.length - 1 ; i >= 0 ; i -- )
+		{
+			this.fbService.remove( this.items[i] );
+		}
 	}
 	
 	addItem( newItem:string )
 	{
-		this.model.items.push( newItem );
-		console.log("num : " + this.model.items.length);
+		this.fbService.add( new Todo( newItem) );
 	}
 }
