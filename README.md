@@ -1,5 +1,5 @@
 # angular2-typescript-basics
-A simple Angular2 (Alpha23) / Typescript(1.5 Beta) / Firebase demo app :
+Basic Angular2 (Alpha23) / Typescript(1.5 Beta) / Firebase demo app :
 - Components with properties, events, directives, injectables, templateURL and child components
 - DI with injectables
 - custom (event) with EventEmitter
