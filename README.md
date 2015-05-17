@@ -117,3 +117,15 @@ If a component A uses a component B, B must be declared in A @View.directives
 })
 
 ```
+
+### Firebase / AngularFire storage
+```typescript
+// ItemStore.ts
+var data = new AngularFire(new Firebase('https://webapi.firebaseio-demo.com/test'));
+this.store = data.asArray();
+
+// add, remove... an item
+this.store.add( new Todo( newItem) );
+this.store.remove( item );
+
+```

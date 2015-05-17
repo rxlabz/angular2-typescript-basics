@@ -1,6 +1,6 @@
 import { Component, View } from "angular2/angular2";
 
-import {ItemService} from "services/ItemService";
+import {ItemStore} from "services/ItemStore";
 
 
 @Component({
@@ -11,10 +11,10 @@ import {ItemService} from "services/ItemService";
 })
 export class ItemForm{
 
-	service:ItemService;
+	service:ItemStore;
 	currentValue:string;
 
-	constructor(service:ItemService)
+	constructor(service:ItemStore)
 	{
 		this.service = service;
 		this.currentValue = "";

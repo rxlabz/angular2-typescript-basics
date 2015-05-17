@@ -7,8 +7,9 @@
     "files": [
         "app.ts",
         "components/ItemForm.ts",
-        "components/MyModel.ts",
+        "components/Todo.ts",
         "components/ItemRenderer.ts",
+        "services/ItemStore.ts",
         "typings/tsd.d.ts"
     ]
 }
