@@ -4,7 +4,7 @@ A simple Angular2 (Alpha23) / Typescript(1.5 Beta) / Firebase demo app :
 - DI with injectables
 - custom (event) with EventEmitter
 - stores data in Firebase
-- user For & If directives
+- uses For & If directives
 
 ##Setup
 Install node & npm : https://nodejs.org
