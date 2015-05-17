@@ -1,8 +1,10 @@
 # angular2-typescript-basics
-A very basic Angular2 (Alpha23) / Typescript(1.5 Beta) app :
-- Components with properties, events, directives, injectables, templateURL and "subcomponents"
+A simple Angular2 (Alpha23) / Typescript(1.5 Beta) / Firebase demo app :
+- Components with properties, events, directives, injectables, templateURL and child components
 - DI with injectables
 - custom (event) with EventEmitter
+- stores data in Firebase
+- user For & If directives
 
 ##Setup
 Install node & npm : https://nodejs.org
@@ -119,7 +121,7 @@ If a component A uses a component B, B must be declared in A @View.directives
 
 ```
 
-### Firebase / AngularFire storage
+### Firebase / AngularFire storage 
 ```typescript
 // ItemStore.ts
 var data = new AngularFire(new Firebase('https://webapi.firebaseio-demo.com/test'));
@@ -129,4 +131,16 @@ this.store = data.asArray();
 this.store.add( ... );
 this.store.remove( ... );
 
+```
+
+### For directive 
+```html
+<ul>
+	<li *for="#item of items" >{{ item.title }}</li>
+</ul>
+```
+
+### If directive 
+```html
+<div *if="aComponentProperty">...</div>
 ```
