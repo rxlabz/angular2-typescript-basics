@@ -43,6 +43,7 @@ class NiceComponent{
 	aMethod(){...}
 }
 ```
+
 ### Dependency Injection
 ```typescript
 @Component({
@@ -125,7 +126,7 @@ var data = new AngularFire(new Firebase('https://webapi.firebaseio-demo.com/test
 this.store = data.asArray();
 
 // add, remove... an item
-this.store.add( new Todo( newItem) );
-this.store.remove( item );
+this.store.add( ... );
+this.store.remove( ... );
 
 ```
