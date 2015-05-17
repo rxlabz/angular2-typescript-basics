@@ -7,7 +7,7 @@ import {AngularFire, FirebaseArray} from 'firebase/angularfire';
 import {ItemRenderer} from "components/ItemRenderer";
 import {ItemForm} from "components/ItemForm";
 import {ItemStore} from "services/ItemStore";
-import {Todo} from "components/MyModel";
+import {Todo} from "components/Todo";
 
 @Component({
 	selector:'app',
