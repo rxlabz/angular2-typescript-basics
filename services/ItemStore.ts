@@ -1,3 +1,5 @@
+/// <reference path="../typings/tsd.d.ts" />
+
 import { Component, View } from "angular2/angular2";
 import {bind} from 'angular2/di';
 import {AngularFire, FirebaseArray} from 'firebase/angularfire';
@@ -25,8 +27,12 @@ export class ItemStore{
 		this.store.remove(item);
 	}
 	
+	updateItem( item:Todo ){
+		console.log("updateItem " + item.title);
+		this.store.save(item);
+	}
+	
 	removeAll(){
-		
 		for( var i = this.items.length - 1 ; i >= 0 ; i -- )
 		{
 			this.store.remove( this.items[i] );

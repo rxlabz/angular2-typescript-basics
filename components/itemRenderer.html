@@ -19,9 +19,23 @@
 		margin-left: 20px;
 		margin-right: 10px;
 	}
+	
+	item-renderer input{
+		width: 260px;
+	}
 </style>
 
-<div class="content">
-	<span class="item-label" >{{ item.title }}</span>
-	<a href="#" (click)="removeItem(item)">x</a>
+<div class="content" *if="!editable" >
+		<span class="item-label" >{{ item.title }}</span>
+		<a href="#" (click)="edit()">Edit</a>
+		<a href="#" (click)="removeItem(item)">x</a>
+</div>
+
+<div class="content" *if="editable" >
+	<input #tInput type="text" *if="editable"
+		[value]="item.title" 
+		(keyup)="save($event)"
+		(change)="autosave($event)" />
+	<a href="#" (click)="save(tInput)" >Save</a>
+	<a href="#" (click)="cancel()" >Cancel</a>
 </div>

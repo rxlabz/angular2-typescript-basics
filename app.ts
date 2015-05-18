@@ -34,6 +34,10 @@ class App{
 		this.service.removeItem(item);	 
 	}
 	
+	updateItem( item:Todo ){
+		this.service.updateItem(item);	 
+	}
+	
 	removeAll(){
 		this.service.removeAll();
 	}
