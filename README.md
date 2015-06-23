@@ -20,11 +20,13 @@ npm install http-server -g
 check https://angular.io/docs/js/latest/quickstart.html or https://www.youtube.com/watch?v=HmWm21cCAXM for setup details 
 
 ## typescript definitions
+
+```
 tsd query angular2 --save --action install
 tsd query es6-promise --save --action install
 tsd query rx --save --action install
 tsd query rx-lite --save --action install
-
+```
 ## Run
 ```bash
 cd path/to/folder
