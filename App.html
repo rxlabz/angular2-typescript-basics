@@ -15,13 +15,13 @@
 
 <item-form></item-form>
 	
-<p *if="items.length > 0" >
+<p *ng-if="items.length > 0" >
 	{{ items.length }} items |  
 	<a href="#" (click)="removeAll()">Remove all</a>
 </p>
 
 <ul>
-	<li *for="#item of items"> 
+	<li *ng-for="#item of items"> 
 		<item-renderer
 			[item]="item"
 			(delete-item)="removeItem(item)"

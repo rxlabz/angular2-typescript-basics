@@ -25,14 +25,14 @@
 	}
 </style>
 
-<div class="content" *if="!editable" >
+<div class="content" *ng-if="!editable" >
 		<span class="item-label" >{{ item.title }}</span>
 		<a href="#" (click)="edit()">Edit</a>
 		<a href="#" (click)="removeItem(item)">x</a>
 </div>
 
-<div class="content" *if="editable" >
-	<input #tInput type="text" *if="editable"
+<div class="content" *ng-if="editable" >
+	<input #tInput type="text" *ng-if="editable"
 		[value]="item.title" 
 		(keyup)="save($event)"
 		(change)="autosave($event)" />

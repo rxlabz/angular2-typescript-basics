@@ -19,7 +19,7 @@ export class ItemStore{
 	}
 	
 	constructor(){
-		var data = new AngularFire(new Firebase('https://webapi.firebaseio-demo.com/test'));
+		var data = new AngularFire( new Firebase('https://webapi.firebaseio-demo.com/test'));
 		this.store = data.asArray();
 	}
 	

@@ -1,16 +1,16 @@
 /// <reference path="../typings/tsd.d.ts" />
 
-import { Component, View, EventEmitter , If } from "angular2/angular2";
+import { Component, View, EventEmitter , NgIf } from "angular2/angular2";
 import {Todo} from "components/Todo"
 
 @Component({
 	selector:'item-renderer',
-	properties:{item: "item"},
+	properties:["item: item"],
 	events:['deleteItem','updateItem']
 })
 @View({
 	templateUrl:"components/ItemRenderer.html",
-	directives:[If]
+	directives:[NgIf]
 })
 export class ItemRenderer{
 	item:Todo;
@@ -26,7 +26,7 @@ export class ItemRenderer{
 	}
 	
 	removeItem( item:string ){
-		this.deleteItem.next()
+		this.deleteItem.next(item)
 		console.log('remove ' + item);
 	}
 	
@@ -40,7 +40,7 @@ export class ItemRenderer{
 			return;
 			 
 		console.log("new title");
-		this.updateItem.next();
+		this.updateItem.next(null);
 		this.editable = false;
 	}
 	
