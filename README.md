@@ -1,10 +1,10 @@
 # angular2-typescript-basics
 Basic Angular2 (Alpha27) / Typescript(1.5 Beta) / Firebase demo app :
-- Components with properties, events, directives, injectables, templateURL and child components
-- DI with injectables
+- Components with properties, events, directives, appInjector, templateURL and child components
+- DI with appInjector
 - custom (event) with EventEmitter
 - stores data in Firebase
-- uses For & If directives
+- uses NgFor & NgIf directives
 
 ##Setup
 Install node & npm : https://nodejs.org
@@ -35,7 +35,6 @@ cd path/to/folder
 tsc -w
 
 # launch a server in default browser 
-# !!! BROKEN IN Safari/IE - https://github.com/angular/angular/issues/1640
 http-server -o
 ```
 ## Angular 2
@@ -58,7 +57,7 @@ class NiceComponent{
 ```typescript
 @Component({
   selector:'nice-component',
-  injectables:[AClassToInject]
+  appInjector:[AClassToInject]
 })
 ...
 class NiceComponent{
@@ -88,7 +87,7 @@ export class itemRenderer{
 	}
 	
 	removeItem( item:string ){
-		this.deleteItem.next();
+		this.deleteItem.next(item);
 		console.log('remove ' + item);
 	}
 }
@@ -106,14 +105,14 @@ import { Component, View, EventEmitter } from "angular2/angular2";
 
 @Component({
 	...,
-	properties:{item: "item"}
+	properties:['item: item']
 })
 ```
 
 ```html
 // Main.html 
 <ul>
-	<li *for="#item of model.items"> 
+	<li *ng-for="#item of model.items"> 
 		<item-renderer [item]="item" /> <!-- new [property] syntax -->
 	</li>
 </ul>
@@ -124,7 +123,7 @@ If a component A uses a component B, B must be declared in A @View.directives
 ```typescript
 @View({
 	...,
-	directives:[For, itemForm, itemRenderer]
+	directives:[NgFor, itemForm, itemRenderer]
 })
 
 ```
@@ -145,11 +144,11 @@ this.store.remove( ... );
 ### For directive 
 ```html
 <ul>
-	<li *for="#item of items" >{{ item.title }}</li>
+	<li *ng-for="#item of items" >{{ item.title }}</li>
 </ul>
 ```
 
 ### If directive 
 ```html
-<div *if="aComponentProperty">...</div>
+<div *ng-if="aComponentProperty">...</div>
 ```
