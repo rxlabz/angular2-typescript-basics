@@ -1,7 +1,7 @@
 /// <reference path="typings/tsd.d.ts" />
 
 import {Component, View, bootstrap , NgFor, NgIf, EventEmitter } from "angular2/angular2";
-//import {bind} from 'angular2/di';
+
 import {AngularFire, FirebaseArray} from 'firebase/angularfire';
 
 import {ItemRenderer} from "components/ItemRenderer";
@@ -11,7 +11,7 @@ import {Todo} from "components/Todo";
 
 @Component({
 	selector:'app',
-	appInjector:[ItemStore]
+	viewInjector:[ItemStore]
 })
 @View({
 	templateUrl:"App.html",
