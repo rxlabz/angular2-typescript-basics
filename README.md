@@ -1,7 +1,7 @@
 # angular2-typescript-basics
 Basic Angular2 (Alpha35) / Typescript(1.5) / Firebase demo app :
-- Components with properties, events, directives, appInjector, templateURL and child components
-- DI with appInjector
+- Components with properties, events, directives, viewInjector, templateURL and child components
+- DI with viewInjector
 - custom (event) with EventEmitter
 - stores data in Firebase
 - uses NgFor & NgIf directives
@@ -57,7 +57,7 @@ class NiceComponent{
 ```typescript
 @Component({
   selector:'nice-component',
-  appInjector:[AClassToInject]
+  viewInjector:[AClassToInject]
 })
 ...
 class NiceComponent{
