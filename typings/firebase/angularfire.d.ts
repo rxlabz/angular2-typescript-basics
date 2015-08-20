@@ -1,6 +1,7 @@
 ﻿/// <reference path='firebase.d.ts'/>
 
 export declare class AngularFire {
+    constructor (fBase: Firebase);
     asArray(): FirebaseArray;
 }
 

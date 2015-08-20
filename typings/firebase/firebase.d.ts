@@ -149,6 +149,8 @@ interface FirebaseQuery {
 }
 
 interface Firebase extends FirebaseQuery {
+    constructor(path:string);
+    
     /**
      * @deprecated Use authWithCustomToken() instead.
      * Authenticates a Firebase client using the provided authentication token or Firebase Secret.
