@@ -1,5 +1,5 @@
 # angular2-typescript-basics
-Basic Angular2 (Alpha27) / Typescript(1.5 Beta) / Firebase demo app :
+Basic Angular2 (Alpha35) / Typescript(1.5) / Firebase demo app :
 - Components with properties, events, directives, appInjector, templateURL and child components
 - DI with appInjector
 - custom (event) with EventEmitter
@@ -11,7 +11,7 @@ Install node & npm : https://nodejs.org
 
 Get Visual Code Studio : https://code.visualstudio.com
 
-install [typescript 1.5.0](http://www.typescriptlang.org) & [tsd](https://github.com/Definitelytyped/tsd#readme) :
+install [typescript 1.5](http://www.typescriptlang.org) & [tsd](https://github.com/Definitelytyped/tsd#readme) :
 ```
 npm install typescript -g
 npm install tsd -g
