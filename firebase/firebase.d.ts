@@ -292,8 +292,7 @@ interface FirebaseStatic {
         TIMESTAMP: any;
     };
 }
-
-declare var Firebase: FirebaseStatic;
+export declare var Firebase: FirebaseStatic;
 
 // Reference: https://www.firebase.com/docs/web/api/firebase/getauth.html
 interface FirebaseAuthData {
