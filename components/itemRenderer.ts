@@ -15,7 +15,7 @@ import {Todo} from "components/Todo"
 export class ItemRenderer{
 	item:Todo;
 	deleteItem:EventEmitter;
-	updateItem:EventEmitter;
+	updateItem:EventEmitter; 
 	editable:boolean;
 	lastValue:string;
 	

@@ -11,7 +11,7 @@ import {ItemStore} from "services/ItemStore";
 })
 export class ItemForm{
 
-	service:ItemStore;
+	service:ItemStore; 
 	currentValue:string;
 
 	constructor(service:ItemStore)

@@ -1,7 +1,6 @@
 /// <reference path="../typings/tsd.d.ts" />
 
 import { Component, View } from "angular2/angular2";
-import {bind} from 'angular2/di';
 import {AngularFire, FirebaseArray} from 'firebase/angularfire';
 
 import {Todo} from "components/Todo";
