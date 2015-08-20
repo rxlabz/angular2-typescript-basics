@@ -15,7 +15,7 @@ import {Todo} from "components/Todo";
 })
 @View({
 	templateUrl:"App.html",
-	directives:[NgFor, NgIf, ItemForm, ItemRenderer, ItemStore]	
+	directives:[NgFor, NgIf, ItemForm, ItemRenderer]	
 })
 class App{	
 	service:ItemStore;
@@ -43,4 +43,4 @@ class App{
 	}
 }
 
-bootstrap(App);
+bootstrap(App );
