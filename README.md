@@ -67,6 +67,8 @@ class NiceComponent{
   }
   ...
 }
+...
+bootstrap( App, [AClassToInject] );
 ```
 
 ### EventEmitter
