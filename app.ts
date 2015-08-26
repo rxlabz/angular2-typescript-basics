@@ -43,4 +43,4 @@ class App{
 	}
 }
 
-bootstrap(App );
+bootstrap( App, [ItemStore] );
