@@ -35,8 +35,6 @@ class App{
 	}
 	
 	updateItem( item:Todo ){
-		console.log('update', item);
-		
 		this.service.updateItem(item);	 
 	}
 	
