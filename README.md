@@ -1,5 +1,5 @@
 # angular2-typescript-basics
-Basic Angular2 (Alpha35) / Typescript(1.5) / Firebase demo app :
+Basic Angular2 (Alpha36) / Typescript(1.5) / Firebase demo app :
 - Components with properties, events, directives, viewInjector, templateURL and child components
 - DI with viewInjector
 - custom (event) with EventEmitter
@@ -22,10 +22,8 @@ check https://angular.io/docs/js/latest/quickstart.html or https://www.youtube.c
 ## typescript definitions
 
 ```
-tsd query angular2 --save --action install
-tsd query es6-promise --save --action install
-tsd query rx --save --action install
-tsd query rx-lite --save --action install
+tsd init
+tsd query angular2 es6-promise rx rx-lite --save --action install
 ```
 ## Run
 ```bash
