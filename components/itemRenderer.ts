@@ -14,14 +14,12 @@ import {Todo} from "components/Todo"
 })
 export class ItemRenderer{
 	item:Todo;
-	deleteItem:EventEmitter;
-	updateItem:EventEmitter; 
+	deleteItem:EventEmitter = new EventEmitter();
+	updateItem:EventEmitter = new EventEmitter(); 
 	editable:boolean;
 	lastValue:string;
 	
 	constructor(){
-		this.deleteItem = new EventEmitter();
-		this.updateItem = new EventEmitter();
 		this.editable = false;
 	}
 	
@@ -40,7 +38,7 @@ export class ItemRenderer{
 			return;
 			 
 		console.log("new title");
-		this.updateItem.next(null);
+		this.updateItem.next(this.item);
 		this.editable = false;
 	}
 	

@@ -1,6 +1,6 @@
 /// <reference path="typings/tsd.d.ts" />
 
-import {Component, View, bootstrap , NgFor, NgIf, EventEmitter } from "angular2/angular2";
+import {Component, View, bootstrap , NgFor, NgIf } from "angular2/angular2";
 
 import {AngularFire, FirebaseArray} from 'firebase/angularfire';
 
@@ -35,6 +35,8 @@ class App{
 	}
 	
 	updateItem( item:Todo ){
+		console.log('update', item);
+		
 		this.service.updateItem(item);	 
 	}
 	
