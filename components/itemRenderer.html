@@ -34,10 +34,19 @@
 </div>
 
 <div class="content" *ng-if="editable" >
-	<input #tInput type="text" *ng-if="editable"
-		[value]="item.title"
-		(keyup)="save($event)"
-		(change)="autosave($event)" />
-	<a href="#" (click)="save(tInput)" >Save</a>
-	<a href="#" (click)="cancel()" >Cancel</a>
+	<form (^submit)="save($event)" [ng-form-model]="todoForm">
+		<div [hidden]="!hasError">Required</div>
+		<input ng-control="title" #tInput type="text" 
+			[value]="item.title"
+			(keyup)="onKey($event)"
+			/>
+			<!--(focus)="onItemFocus()"-->
+			<!--(change)="autosave($event)" -->
+		<button type="submit">Save</button>
+	<!--<a href="#" type="submit"  >Save</a>-->
+		<a href="#" (click)="cancel()" >Cancel</a>
+		
+		
+		
+	</form>
 </div>
