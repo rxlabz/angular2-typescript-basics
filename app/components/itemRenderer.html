@@ -1,0 +1,42 @@
+<style>
+	.content{
+		background-color: #F0F0F0;
+		width: 440px;
+		height: 32px;
+		padding-left: 10px;
+		line-height: 32px;
+	}
+
+	.item-label{
+		text-align: left;
+		width: 300px;
+		display: inline-block;
+	}
+
+	a{
+		margin-left: 20px;
+		margin-right: 10px;
+	}
+
+	item-renderer input{
+		width: 260px;
+	}
+</style>
+
+<div class="content" *ngIf="!editable">
+	<span class="item-label">{{ item.title }}</span>
+	<a href="#" (click)="edit()">Edit</a>
+	<a href="#" (click)="removeItem(item)">x</a>
+</div>
+
+<div class="content" *ngIf="editable">
+	<form (ngSubmit)="save($event)" [ngFormModel]="todoForm">
+		<span [hidden]="!hasError">Required</span>
+		<input ngControl="title" #tInput type="text"
+			   [value]="item.title"
+			   (keyup)="onKey($event)"
+		/>
+		<button type="submit">Save</button>
+		<a href="#" (click)="cancel()" >Cancel</a>
+	</form>
+</div>

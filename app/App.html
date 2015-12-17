@@ -1,34 +1,32 @@
 <style>
-	
+
 	ul{
 		width:420px;
 		display: block;
 		margin: 0 auto;
 	}
-	
+
 	li{
 		list-style: none;
 	}
 </style>
-
 <h1>{{ appName }}</h1>
 
 <item-form></item-form>
-	
-<p *ng-if="items.length > 0" >
-	{{ items.length }} items |  
+
+<p *ngIf="items.length > 0">
+	{{ items.length }} items |
 	<a href="#" (click)="removeAll()">Remove all</a>
 </p>
 
 <ul>
-	<li *ng-for="#item of items"> 
+	<li *ngFor="#item of items">
 		<item-renderer
-			[item]="item"
-			(delete-item)="removeItem(item)"
-			(update-item)="updateItem(item)"
-		/>
+				[item]="item"
+				(deleteItem)="removeItem(item)"
+				(updateItem)="updateItem(item)"
+		></item-renderer>
 	</li>
 </ul>
-
 
 

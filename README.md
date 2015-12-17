@@ -1,48 +1,33 @@
 # angular2-typescript-basics
-Basic Angular2 (Alpha36) / Typescript(1.5) / Firebase demo app :
+Basic Angular2 (Alpha30) / Typescript(1.7.5) / Firebase study app :
 - Components with properties, events, directives, viewInjector, templateURL and child components
-- DI with viewInjector
+- DI with providers
 - custom (event) with EventEmitter
-- stores data in Firebase
+- stores data with Firebase
 - uses NgFor & NgIf directives
 
-##Setup
-Install node & npm : https://nodejs.org
+## Setup
+check [setup details](https://angular.io/docs/js/latest/quickstart.html)
 
-Get Visual Code Studio : https://code.visualstudio.com
-
-install [typescript 1.5](http://www.typescriptlang.org) & [tsd](https://github.com/Definitelytyped/tsd#readme) :
-```
-npm install typescript -g
-npm install tsd -g
-npm install http-server -g
-```
-check https://angular.io/docs/js/latest/quickstart.html or https://www.youtube.com/watch?v=HmWm21cCAXM for setup details 
-
-## typescript definitions
-
-```
-tsd init
-tsd query angular2 es6-promise rx rx-lite --save --action install
-```
-## Run
 ```bash
-cd path/to/folder
-
-# ts2js watcher
-tsc -w
-
-# launch a server in default browser 
-http-server -o
+npm install
 ```
+
+## Run
+
+cf. package.json "scripts"
+```bash
+npm run go
+```
+
 ## Angular 2
 ### Component Base
 ```typescript
+import {Component} from "angular2/core"
+
 @Component({
   selector:'nice-component'
-})
-@View({
-  templateUrl:"path/to/NiceComponent.html"
+  templateUrl:"relativePath/to/NiceComponent.html"
 })
 class NiceComponent{
 	property:type;
@@ -55,7 +40,7 @@ class NiceComponent{
 ```typescript
 @Component({
   selector:'nice-component',
-  viewInjector:[AClassToInject]
+  providers:[AClassToInject]
 })
 ...
 class NiceComponent{
@@ -71,37 +56,36 @@ bootstrap( App, [AClassToInject] );
 
 ### EventEmitter
 ```typescript
-import { Component, View, EventEmitter } from "angular2/angular2";
+import { Component, EventEmitter } from "angular2/core";
 
 @Component({
-	...,
+	/* ... */
 	events:['deleteItem']
 })
 ...
 export class itemRenderer{
 	...
-	deleteItem:EventEmitter
+	deleteItem:EventEmitter;
 	
 	constructor(){
 		this.deleteItem = new EventEmitter();
 	}
 	
 	removeItem( item:string ){
-		this.deleteItem.next(item);
-		console.log('remove ' + item);
+		this.deleteItem.emit(item);
 	}
 }
 ```
 Listen to an event with the new (event) syntax
 
 ```html
-<item-renderer (delete-item)="removeItem(item)" />
+<item-renderer (deleteItem)="removeItem(item)" />
 ```
 
 ### Component properties
 ```typescript
 // itemRenderer.ts
-import { Component, View, EventEmitter } from "angular2/angular2";
+import { Component, EventEmitter } from "angular2/core";
 
 @Component({
 	...,
@@ -112,7 +96,7 @@ import { Component, View, EventEmitter } from "angular2/angular2";
 ```html
 // Main.html 
 <ul>
-	<li *ng-for="#item of model.items"> 
+	<li *ngFor="#item of model.items">
 		<item-renderer [item]="item" /> <!-- new [property] syntax -->
 	</li>
 </ul>
@@ -123,7 +107,7 @@ If a component A uses a component B, B must be declared in A @View.directives
 ```typescript
 @View({
 	...,
-	directives:[NgFor, itemForm, itemRenderer]
+	directives:[ ItemForm, ItemRenderer]
 })
 
 ```
@@ -144,11 +128,40 @@ this.store.remove( ... );
 ### For directive 
 ```html
 <ul>
-	<li *ng-for="#item of items" >{{ item.title }}</li>
+	<li *ngFor="#item of items" >{{ item.title }}</li>
 </ul>
 ```
 
 ### If directive 
 ```html
-<div *ng-if="aComponentProperty">...</div>
+<div *ngIf="aComponentProperty">...</div>
+```
+
+### Forms
+
+```html
+<form (ngSubmit)="save($event)" [ngFormModel]="todoForm">
+	<div [hidden]="!hasError">Required</div>
+	<input ngControl="title" #tInput type="text"
+		   [value]="item.title"
+		   (keyup)="onKey($event)"
+	/>
+	<button type="submit">Save</button>
+
+</form>
+```
+
+```javascript
+
+private todoForm:ControlGroup;
+
+var fb = new FormBuilder()
+this.todoForm = fb.group({
+	title: [ this._item.title, Validators.required ]
+});
+
+if( this.todoForm.valid ){
+	this.hasError = false;
+	this.item.title = this.todoForm.value.title;
+} else // ...
 ```

@@ -1,8 +1,9 @@
 app.js
-services/*.js
-components/*.js
+app/services/*.js
+app/components/*.js
 *.iml
 node_modules/*
 .
 .DS_Store
 .idea
+*.js.map

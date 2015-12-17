@@ -1,21 +1,7 @@
 <html>
-
-	<head>
-		<title>NG2 Basics</title>
-		<script src="http://cdn.rawgit.com/google/traceur-compiler/90da568c7aa8e53ea362db1fc211fbb4f65b5e94/bin/traceur-runtime.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system.src.js"></script>
-    	
-		<script>
-    		//configure system loader
-    		System.config({
-        		defaultJSExtensions: true  
-    		});
-		</script>
-		
-		<script src="https://code.angularjs.org/2.0.0-alpha.36/angular2.js"></script>
-		<script src="/firebase/firebase.js"></script>
-
-	</head>
+<head>
+	<title>NG2 Basics</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		body{
 			text-align: center;
@@ -26,12 +12,27 @@
 			max-width: 440px;
 		}
 	</style>
-	<body>
-		<app></app>
-	</body>
+	<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="node_modules/rxjs/bundles/Rx.js"></script>
+	<script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+	<script src='app/firebase/firebase.js'></script>
 
-		<script>
-			System.import( 'app' );
-		</script>
+	<script>
+		System.config({
+			packages: {
+				app: {
+					format: 'register',
+					defaultExtension: 'js'
+				}
+			}
+		});
+		System.import('app/boot').then(null, console.error.bind(console));
+	</script>
 
+
+</head>
+<body>
+<app>...</app>
+</body>
 </html>
