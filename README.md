@@ -105,7 +105,7 @@ import { Component, EventEmitter } from "angular2/core";
 If a component A uses a component B, B must be declared in A @View.directives
 
 ```typescript
-@View({
+@Component({
 	...,
 	directives:[ ItemForm, ItemRenderer]
 })
