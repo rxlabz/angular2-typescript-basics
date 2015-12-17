@@ -1,5 +1,5 @@
 # angular2-typescript-basics
-Basic Angular2 (Alpha30) / Typescript(1.7.5) / Firebase study app :
+Basic Angular2 (beta0) / Typescript(1.7.5) / Firebase study app :
 - Components with properties, events, directives, viewInjector, templateURL and child components
 - DI with providers
 - custom (event) with EventEmitter
