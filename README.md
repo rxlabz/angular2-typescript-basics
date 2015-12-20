@@ -42,7 +42,9 @@ class NiceComponent{
   selector:'nice-component',
   providers:[AClassToInject]
 })
-...
+
+// ...
+
 class NiceComponent{
   ...
   constructor(injectedInstance:AClassToInject){
@@ -50,7 +52,14 @@ class NiceComponent{
   }
   ...
 }
-...
+
+// ...
+
+@Injectable
+export class AClassToInject{
+// ...
+}
+
 bootstrap( App, [AClassToInject] );
 ```
 
