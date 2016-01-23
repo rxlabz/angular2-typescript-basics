@@ -39,6 +39,6 @@ export class ItemStore{
     }
 
     addItem(newItem:string) {
-        this.store.add(new Todo(newItem));
+        this.store.add(new Todo(newItem, new Date()));
     }
 }

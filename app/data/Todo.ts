@@ -1,10 +1,12 @@
 export class Todo{
 	title:string;
 	completed:boolean;
-	
-	constructor(t:string, c:boolean = false)
+    creationDate:string;
+
+    constructor(t:string, d:Date)
 	{
 		this.title = t;
-		this.completed = c;
+        this.creationDate = d.toDateString();
+        console.log('date', this.creationDate);
 	}
 }
