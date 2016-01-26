@@ -1,9 +1,13 @@
 app.js
 app/services/*.js
+app/data/*.js
 app/components/*.js
+app/directives/*.js
+app/components/tooltip/*.js
 *.iml
 node_modules/*
 .
 .DS_Store
 .idea
 *.js.map
+*.log
