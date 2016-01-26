@@ -23,7 +23,8 @@
 	}
 </style>
 
-<div class="content" *ngIf="!editable">
+<div class="content" *ngIf="!editable"
+	 [toolTiper]="item.creationDate">
 	<span class="item-label">{{ item.title }}</span>
 	<a href="#" (click)="edit()">Edit</a>
 	<a href="#" (click)="removeItem(item)">x</a>
