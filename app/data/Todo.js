@@ -4,10 +4,10 @@ System.register([], function(exports_1) {
         setters:[],
         execute: function() {
             Todo = (function () {
-                function Todo(t, c) {
-                    if (c === void 0) { c = false; }
+                function Todo(t, d) {
                     this.title = t;
-                    this.completed = c;
+                    this.creationDate = d.toDateString();
+                    console.log('date', this.creationDate);
                 }
                 return Todo;
             })();

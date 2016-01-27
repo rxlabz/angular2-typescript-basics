@@ -174,3 +174,43 @@ if( this.todoForm.valid ){
 	this.item.title = this.todoForm.value.title;
 } else // ...
 ```
+
+### Attribute Directive
+
+
+
+**Host template** [itemRenderer.html](https://github.com/rxlabz/angular2-typescript-basics/blob/master/app/components/itemRenderer.html)
+
+```html
+<div class="content" *ngIf="!editable"
+	 [toolTiper]="item.creationDate">
+<!-- ... -->
+</div>
+```
+**Attribute directive** [tooltiper.directive.ts](https://github.com/rxlabz/angular2-typescript-basics/blob/master/app/directives/tooltiper.directive.ts)
+```typescript
+@Directive({
+        selector: '[toolTiper]',
+        host: {
+            '(mouseenter)': 'onMouseEnter()',
+            '(mouseleave)': 'onMouseLeave()'
+        }
+    }
+)
+export class ToolTiper {
+
+@Input('toolTiper') toolTipContent:string = '';
+
+tooltipElement:ComponentRef;
+
+constructor(
+	private el:ElementRef,
+	private container:ViewContainerRef,
+	private renderer:Renderer,
+	private loader:DynamicComponentLoader
+	) {
+        loader.loadNextToLocation(Tooltip, this.el)
+            .then(ref => this.tooltipElement = ref);
+    }
+}
+```
