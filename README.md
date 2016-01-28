@@ -5,6 +5,8 @@ Basic Angular2 (beta0) / Typescript(1.7.5) / Firebase study app :
 - custom (event) with EventEmitter
 - stores data with Firebase
 - uses NgFor & NgIf directives
+- FormBuilder
+- Tooltip Attribute directive
 
 ## Setup
 check [setup details](https://angular.io/docs/js/latest/quickstart.html)
@@ -176,8 +178,6 @@ if( this.todoForm.valid ){
 ```
 
 ### Attribute Directive
-
-
 
 **Host template** [itemRenderer.html](https://github.com/rxlabz/angular2-typescript-basics/blob/master/app/components/itemRenderer.html)
 
