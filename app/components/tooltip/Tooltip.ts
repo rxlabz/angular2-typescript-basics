@@ -9,7 +9,7 @@ import {Component} from "angular2/core";
     styleUrls: ['app/components/tooltip/Tooltip.css']
 })
 export class Tooltip {
-    isVisible:boolean = false;
+    visible:boolean = false;
     content:string;
     pos:ClientRect;
     test:string = 'red';
@@ -29,9 +29,13 @@ export class Tooltip {
      * @param pos
      */
     update(visible:boolean, content:string, pos:ClientRect) {
-        this.isVisible = visible;
+        this.visible = visible;
         this.content = content;
         this.pos = pos;
+    }
+
+    hide() {
+        this.visible = false;
     }
 
 

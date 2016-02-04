@@ -65,6 +65,6 @@ export class ToolTiper {
 
     hideTip() {
         console.log('hideTip');
-        this.tooltipElement.instance.isVisible = false;
+        this.tooltipElement.instance.visible = false;
     }
 }
