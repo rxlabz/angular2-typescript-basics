@@ -24,7 +24,7 @@ npm run go
 
 ## Angular 2
 ### Basic Component
-```typescript
+```typescrip
 import {Component} from "angular2/core"
 
 @Component({

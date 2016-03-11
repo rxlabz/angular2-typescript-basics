@@ -1,4 +1,6 @@
-System.register([], function(exports_1) {
+System.register([], function (exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var AngularFire, FirebaseArray;
     return {
         setters:[],
@@ -11,7 +13,7 @@ System.register([], function(exports_1) {
                     return new FirebaseArray(this.ref);
                 };
                 return AngularFire;
-            })();
+            }());
             exports_1("AngularFire", AngularFire);
             /*
              FirebaseArray
@@ -90,7 +92,7 @@ System.register([], function(exports_1) {
                     return this.list.find(function (item) { return key === item._key; });
                 };
                 return FirebaseArray;
-            })();
+            }());
             exports_1("FirebaseArray", FirebaseArray);
         }
     }
