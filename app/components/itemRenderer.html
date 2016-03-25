@@ -1,33 +1,60 @@
 <style>
+
+	:host {
+		margin: 8px;
+	}
 	.content{
+		margin: 8px;
+		padding: 8px;
 		background-color: #F0F0F0;
-		width: 440px;
-		height: 32px;
-		padding-left: 10px;
+		/*width: 480px;*/
 		line-height: 32px;
+		flex: 1;
+		display: flex;
+	}
+
+	form {
+		display: flex;
+		padding: 6px;
+		flex: 1;
 	}
 
 	.item-label{
-		text-align: left;
 		width: 300px;
 		display: inline-block;
+		font-size: 1.05em;
+		flex: 1;
 	}
 
-	a{
+	/*a{
 		margin-left: 20px;
 		margin-right: 10px;
+	}*/
+
+	input {
+		padding: 6px;
+		margin-right: 6px;
+		font-size: 1.1em;
+		height: 36px;
+		vertical-align: middle;
+		flex: 1;
 	}
 
-	item-renderer input{
-		width: 260px;
+	button {
+		margin-right: 6px;
+		/*width: 48px;*/
+		height: 36px;
+		vertical-align: middle;
 	}
 </style>
 
 <div class="content" *ngIf="!editable"
 	 [toolTiper]="item.creationDate">
 	<span class="item-label">{{ item.title }}</span>
-	<a href="#" (click)="edit()">Edit</a>
-	<a href="#" (click)="removeItem(item)">x</a>
+	<button md-button class="bt" (click)="edit()">
+		<i class="material-icons md-24">edit</i></button>
+	<button md-button class="bt" (click)="removeItem(item)">
+		<i class="material-icons md-24">delete</i></button>
 </div>
 
 <div class="content" *ngIf="editable">
@@ -37,7 +64,10 @@
 			   [value]="item.title"
 			   (keyup)="onKey($event)"
 		/>
-		<button type="submit">Save</button>
-		<a href="#" (click)="cancel()" >Cancel</a>
+		<button class="bt" md-raised-button color="primary" type="submit">
+			<i class="material-icons md-24">done</i></button>
+		<button class="bt" md-icon-button type="cancel">
+			<i class="material-icons md-24">clear</i></button>
+		<!--<a href="#" (click)="cancel()" >Cancel</a>-->
 	</form>
 </div>

@@ -1,0 +1,83 @@
+{
+  "_args": [
+    [
+      "@angular2-material/button",
+      "/Users/Me/dev/labz/web/Angular2/angular2-typescript-basics"
+    ]
+  ],
+  "_from": "@angular2-material/button@latest",
+  "_id": "@angular2-material/button@2.0.0-alpha.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@angular2-material/button",
+  "_nodeVersion": "5.7.0",
+  "_npmOperationalInternal": {
+    "host": "packages-13-west.internal.npmjs.com",
+    "tmp": "tmp/button-2.0.0-alpha.1.tgz_1458162169572_0.9022796738427132"
+  },
+  "_npmUser": {
+    "email": "angular-core+npm@google.com",
+    "name": "angular2-material"
+  },
+  "_npmVersion": "3.7.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "@angular2-material/button",
+    "raw": "@angular2-material/button",
+    "rawSpec": "",
+    "scope": "@angular2-material",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@angular2-material/button/-/button-2.0.0-alpha.1.tgz",
+  "_shasum": "89bb00748bff457cdc8f63efb5a0c5644d675424",
+  "_shrinkwrap": null,
+  "_spec": "@angular2-material/button",
+  "_where": "/Users/Me/dev/labz/web/Angular2/angular2-typescript-basics",
+  "bugs": {
+    "url": "https://github.com/angular/material2/issues"
+  },
+  "dependencies": {},
+  "description": "Angular 2 Material button",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "89bb00748bff457cdc8f63efb5a0c5644d675424",
+    "tarball": "http://registry.npmjs.org/@angular2-material/button/-/button-2.0.0-alpha.1.tgz"
+  },
+  "homepage": "https://github.com/angular/material2#readme",
+  "keywords": [
+    "angular",
+    "material",
+    "material design",
+    "components",
+    "button",
+    "anchor",
+    "linkbutton"
+  ],
+  "license": "MIT",
+  "main": "./button.js",
+  "maintainers": [
+    {
+      "email": "angular-core+npm@google.com",
+      "name": "angular2-material"
+    }
+  ],
+  "name": "@angular2-material/button",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "@angular2-material/core": "2.0.0-alpha.1",
+    "angular2": "^2.0.0-beta.8"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/material2.git"
+  },
+  "scripts": {},
+  "typings": "./button.d.ts",
+  "version": "2.0.0-alpha.1"
+}

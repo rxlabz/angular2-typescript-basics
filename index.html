@@ -1,38 +1,64 @@
 <html>
 <head>
-	<title>NG2 Basics</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		body{
-			text-align: center;
-			font-family: Geneva, Arial, sans-serif;
-		}
+    <title>NG2 Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            /*margin: 0;
+            padding: 0;*/
+        }
 
-		app{
-			max-width: 440px;
-		}
-	</style>
-	<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
-	<script src="node_modules/systemjs/dist/system.src.js"></script>
-	<script src="node_modules/rxjs/bundles/Rx.js"></script>
-	<script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-	<script src='app/firebase/firebase.js'></script>
+        html {
+            box-sizing: border-box;
+        }
 
-	<script>
-		System.config({
-			packages: {
-				app: {
-					format: 'register',
-					defaultExtension: 'js'
-				}
-			}
-		});
-		System.import('app/boot').then(null, console.error.bind(console));
-	</script>
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            /*text-align: center;*/
+            font-family: Roboto, 'Helvetica Neue', sans-serif;
+        }
+
+        /*app {
+            max-width: 440px;
+        }*/
+    </style>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src='app/firebase/firebase.js'></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 
 
 </head>
 <body>
 <app>...</app>
+
+
+<script>
+    System.config({
+        packages: {
+            app: {
+                format: 'register',
+                defaultExtension: 'js'
+            },
+            components: {
+                format: 'register',
+                defaultExtension: 'js'
+            }
+
+        }
+    });
+    System.import('app/boot').then(null, console.error.bind(console));
+</script>
 </body>
 </html>

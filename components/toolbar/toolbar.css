@@ -1,0 +1,46 @@
+/**
+ * Mixin that creates a new stacking context.
+ * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+ */
+:host {
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 64px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    padding: 0 16px;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    background: whitesmoke;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+:host.md-primary {
+    background: #2196f3;
+    color: white;
+}
+
+:host.md-accent {
+    background: #ff5252;
+    color: white;
+}
+
+:host.md-warn {
+    background: #ff9800;
+    color: rgba(0, 0, 0, 0.870588);
+}
+
+:host md-toolbar-row {
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 64px;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+}

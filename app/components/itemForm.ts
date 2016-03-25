@@ -1,11 +1,12 @@
 import {Component} from "angular2/core";
-
 import {ItemStore} from "../services/ItemStore";
+import {MdButton} from "../../components/button/button";
 
 
 @Component({
     selector: 'item-form',
-    templateUrl: "app/components/ItemForm.html"
+    templateUrl: "app/components/ItemForm.html",
+    directives: [MdButton]
 })
 export class ItemForm{
 

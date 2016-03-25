@@ -1,18 +1,16 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
-import { Component, EventEmitter, OnDestroy} from "angular2/core";
-
-import {Todo} from "../data/Todo"
-import {FormBuilder, Validators, FORM_BINDINGS} from "angular2/common";
-import {ControlGroup} from "angular2/common";
+import {Component, EventEmitter, OnDestroy} from "angular2/core";
+import {Todo} from "../data/Todo";
+import {FormBuilder, Validators, ControlGroup} from "angular2/common";
 import {ToolTiper} from "../directives/tooltiper.directive";
-import {StructuralTip} from "../../../../../../notes/NG2Notes/protos/structural-tooltip.directive.ts";
+import {MdButton} from "../../components/button/button";
 
 @Component({
     selector: 'item-renderer',
     properties: ["item: item"],
     outputs: ['deleteItem', 'updateItem'],
-    directives: [ToolTiper],
+    directives: [ToolTiper, MdButton],
     templateUrl: "app/components/ItemRenderer.html"
 })
 export class ItemRenderer implements OnDestroy {

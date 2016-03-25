@@ -1,32 +1,51 @@
 <style>
+    :host {
+        display: flex;
+        flex-direction: column;
 
-	ul{
-		width:420px;
-		display: block;
-		margin: 0 auto;
-	}
+        align-items: center;
+        /*
+        align-content: stretch;
+        */
+    }
 
-	li{
-		list-style: none;
-	}
+    [md-toolbar] {
+        flex: 1;
+    }
+
+    ul {
+        /*background: #FAA;*/
+        display: block;
+        padding: 0;
+    }
+
+    li {
+        width: 500px;
+        list-style: none;
+        /*background: #AAF;*/
+        margin: 0 auto;
+    }
 </style>
-<h1>{{ appName }}</h1>
+<md-toolbar>
+    <i class="material-icons demo-toolbar-icon">done</i>
+    <h1>{{ appName }}</h1>
+</md-toolbar>
 
 <item-form></item-form>
 
 <p *ngIf="items.length > 0">
-	{{ items.length }} items |
-	<a href="#" (click)="removeAll()">Remove all</a>
+    {{ items.length }} items |
+    <a href="#" (click)="removeAll()">Remove all</a>
 </p>
 
 <ul>
-	<li *ngFor="#item of items">
-		<item-renderer
-				[item]="item"
-				(deleteItem)="removeItem(item)"
-				(updateItem)="updateItem(item)"
-		></item-renderer>
-	</li>
+    <li *ngFor="#item of items">
+        <item-renderer
+                [item]="item"
+                (deleteItem)="removeItem(item)"
+                (updateItem)="updateItem(item)"
+        ></item-renderer>
+    </li>
 </ul>
 
 

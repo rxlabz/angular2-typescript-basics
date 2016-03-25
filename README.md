@@ -214,3 +214,10 @@ constructor(
     }
 }
 ```
+
+
+### <a href="" target="_blank">Material Design 2 alpha</a>
+
++ <a href="https://github.com/angular/material2/tree/master/src/demo-app" target="_blank">demo app</a>
+
++ <a href="https://design.google.com/icons/" target="_blank">Material Design icons</a>

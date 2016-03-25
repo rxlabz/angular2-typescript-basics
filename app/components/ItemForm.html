@@ -1,2 +1,31 @@
-<input #lblname type="text" (keyup)="autosave($event)" >
-<button (click)="addName(lblname)" >Add</button>
+<style>
+    :host {
+        padding: 12px;
+        /*margin: 24px;*/
+        background: #ff0;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input {
+        padding: 6px;
+        width: 360px;
+        font-size: 1.1em;
+        height: 32px;
+    }
+
+    button {
+        margin: 8px;
+        height: 32px;
+    }
+</style>
+
+<input #lblname type="text" (keyup)="autosave($event)"
+       placeholder="New task"
+>
+
+<button md-raised-button (click)="addName(lblname)" color="primary">
+    <i class="material-icons md-24">add</i>
+</button>

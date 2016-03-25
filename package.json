@@ -6,7 +6,8 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
-    "go": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
+    "go": "tsc -w & lite-server",
+    "start": "tsc -w & lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,21 +22,25 @@
   },
   "homepage": "https://github.com/rxlabz/angular2-typescript-basics#readme",
   "dependencies": {
-    "angular2": "2.0.0-beta.9",
+    "@angular2-material/button": "^2.0.0-alpha.1",
+    "@angular2-material/card": "^2.0.0-alpha.1",
+    "@angular2-material/core": "^2.0.0-alpha.1",
+    "@angular2-material/toolbar": "^2.0.0-alpha.1",
+    "angular2": "2.0.0-beta.12",
     "angularfire": "^1.1.3",
     "concurrently": "^2.0.0",
     "es6-promise": "^3.0.2",
-    "es6-shim": "^0.33.3",
+    "es6-shim": "^0.35.0",
     "firebase": "^2.4.1",
     "reflect-metadata": "0.1.2",
     "rxjs": "^5.0.0-beta.2",
     "systemjs": "^0.19.24",
-    "zone.js": "^0.5.15"
+    "zone.js": "^0.6.6"
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
     "lite-server": "^2.1.0",
-    "typescript": "^1.8.7",
-    "typings": "^0.7.7"
+    "typescript": "^1.8.9",
+    "typings": "^0.7.9"
   }
 }
