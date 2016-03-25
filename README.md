@@ -7,6 +7,9 @@ Angular2(beta9) / Typescript(1.8) with Firebase :
 - uses NgFor & NgIf directives
 - FormBuilder
 - Tooltip Attribute directive
+- material2 design alpha.0 integration ( md-button, md-toolbar)
+
+![screen](https://www.evernote.com/l/AAEJ_AvZwDBEBKOuSvmY6whwU28e5OnyxF4B/image.png)
 
 ## Setup
 check [setup details](https://angular.io/docs/js/latest/quickstart.html)
